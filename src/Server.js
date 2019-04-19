@@ -35,4 +35,4 @@ app.use("/files", express.static(path.resolve(__dirname, "..", "tmp"))) //toda v
 
 app.use(require('./Routes')) // aponta (importa) o arquivo onde está configurado as rotas
 
-server.listen(3333) // habilita uma porta para sua aplicação rodar
+server.listen(process.env.PORT || 3333) // habilita uma porta para sua aplicação rodar

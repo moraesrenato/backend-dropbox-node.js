@@ -18,7 +18,9 @@ const File = new mongoose.Schema({ // é uma 'tabela'
 )
 
 File.virtual('url').get(function () {
-    return `http://localhost:3333/files/${encodeURIComponent(this.path)}`
+    const url = process.env.URL || 'http://localhost:3333'
+
+    return `${url}/files/${encodeURIComponent(this.path)}`
 })
 
 module.exports = mongoose.model('File', File) //exporta o model que foi nomeado como Box e passa o schema como parametro
