@@ -1,7 +1,7 @@
 const express = require('express')
-const routes = express.Router()    // com isso a parte de rotas está separada do módulo principal
 const multer = require('multer')
 const multerConfig = require('./config/Multer')
+const routes = express.Router()    // com isso a parte de rotas está separada do módulo principal
 
 
 const BoxController = require('./controllers/BoxController')
