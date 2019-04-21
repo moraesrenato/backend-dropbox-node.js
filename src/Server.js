@@ -33,6 +33,6 @@ app.use(express.json()) //ajuda a entender as requisições que vem em formato j
 app.use(express.urlencoded({ extended: true })) // permite que envie arquivos nas requesições
 app.use("/files", express.static(path.resolve(__dirname, "..", "tmp"))) //toda vez que acessar o diretório Files, ele redireciona os arquivos fisicos da pasta tmp
 
-app.use(require('./Routes')) // aponta (importa) o arquivo onde está configurado as rotas
+app.use(require('./routes')) // aponta (importa) o arquivo onde está configurado as rotas
 
 server.listen(process.env.PORT || 3333) // habilita uma porta para sua aplicação rodar
