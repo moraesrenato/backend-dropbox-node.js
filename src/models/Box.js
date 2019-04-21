@@ -1,6 +1,6 @@
 const mongoose = require('mongoose') //importa o mongoose para esse arquivo
 
-const tabelaBox = new mongoose.Schema({ // é uma 'tabela'
+const Box = new mongoose.Schema({ // é uma 'tabela'
     title: {
         type: String, // o título sempre será uma string
         required: true // o título sempre será obrigatório
@@ -11,4 +11,4 @@ const tabelaBox = new mongoose.Schema({ // é uma 'tabela'
     }
 )
 
-module.exports = mongoose.model('Box', tabelaBox) //exporta o model que foi nomeado como Box e passa o schema como parametro
+module.exports = mongoose.model('Box', Box) //exporta o model que foi nomeado como Box e passa o schema como parametro

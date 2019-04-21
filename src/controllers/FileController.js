@@ -1,7 +1,7 @@
 const File = require('../models/File')
 const Box = require('../models/Box')
 
-class BoxController {
+class FileController {
     async store(req, res) {
         const box = await Box.findById(req.params.id)
 
@@ -20,4 +20,4 @@ class BoxController {
     }
 }
 
-module.exports = new BoxController()
+module.exports = new FileController()
