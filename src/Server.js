@@ -16,7 +16,7 @@ io.on('connection', socket => {
     });
 });
 
-mongoose.connect('mongodb+srv://nicholas:giudice@cluster0-eqjfk.mongodb.net/test?retryWrites=true', {
+mongoose.connect('mmongodb+srv://rbmoraes:rbmoraes@boxjs-wcxyw.mongodb.net/boxjs?retryWrites=true', {
     useNewUrlParser: true
 });
 
@@ -28,8 +28,8 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-app.use('/files', express.static(path.resolve(__dirname, '..', 'temp')));
+app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
 app.use(require('./routes'));
 
-server.listen(process.env.PORT || '3000');
+server.listen(process.env.PORT || 3333);
