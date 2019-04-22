@@ -1,19 +1,19 @@
-const Box = require('../models/Box')
+const Box = require('../models/Box');
 
 class BoxController {
     async store(req, res) {
-        const criaBox = await Box.create({ title: req.body.title })
+        const box = await Box.create(req.body)
 
-        return res.json(criaBox)
+        return res.json(box);
     }
-    async show(req, res) {
-        const box = await Box.findById(req.params.id).populate({ // populate cria uma relação com o Files
-            path: 'files', //passa o nome do campo que vc quer passar em uma variavel (path)
-            options: { sort: { createdAt: -1 } } // coloca na ordem "criado por ultimo primeiro"
-        })
 
-        return res.json(box)
+    async show(req, res) {
+        const box = await Box.findById(req.params.id).populate({
+            path: 'files',
+            options: { sort: { createdAt: -1 } }
+        });
+        return res.json(box);
     }
 }
 
-module.exports = new BoxController()
+module.exports = new BoxController();
