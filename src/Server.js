@@ -16,7 +16,7 @@ io.on('connection', socket => {
     });
 });
 
-mongoose.connect('mmongodb+srv://rbmoraes:rbmoraes@boxjs-wcxyw.mongodb.net/boxjs?retryWrites=true', {
+mongoose.connect('mongodb+srv://nicholas:giudice@cluster0-eqjfk.mongodb.net/test?retryWrites=true', {
     useNewUrlParser: true
 });
 
